@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  server:
+    image: hayd/alpine-deno
+    volumes:
+      - ./server:/app
+    working_dir: /app
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    command: deno run --allow-net server.ts
