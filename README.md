@@ -5,7 +5,7 @@
 ```
 {
   "method": 'PROXY',
-  "from": 'DOOR,
+  "from": 'DOOR',
   "select": '0'
 }
 ```
@@ -13,7 +13,7 @@
 ```
 {
   "method": 'PROXY',
-  "from": 'DOOR,
+  "from": 'DOOR',
   "select": '1'
 }
 ```
@@ -21,7 +21,7 @@
 ```
 {
   "method": 'PROXY',
-  "from": 'DOOR,
+  "from": 'DOOR',
   "select": '1'
 }
 ```
@@ -29,7 +29,7 @@
 ```
 {
   "method": 'PROXY',
-  "from": 'DOOR,
+  "from": 'DOOR',
   "select": '1'
 }
 ```
@@ -37,7 +37,7 @@
 ```
 {
   "method": 'PROXY',
-  "from": 'DOOR,
+  "from": 'DOOR',
   "select": '2'
 }
 ```
@@ -46,7 +46,7 @@
 ```
 {
   "method": 'PROXY',
-  "from": 'DOOR,
+  "from": 'DOOR',
   "select": '3'
 }
 ```
@@ -55,7 +55,7 @@
 ```
 {
   "method": 'PROXY',
-  "from": 'DOOR,
+  "from": 'DOOR',
   "select": '4'
 }
 ```
@@ -65,7 +65,7 @@
 ```
 {
   "method": 'PROXY',
-  "target": 'DOOR,
+  "target": 'DOOR',
   "message": '訪問者確認'
 }
 ```
@@ -73,7 +73,7 @@
 ```
 {
   "method": 'PROXY',
-  "target": 'BOTH,
+  "target": 'BOTH',
   "message": '在宅確認'
 }
 ```
@@ -81,7 +81,7 @@
 ```
 {
   "method": 'PROXY',
-  "target": 'DOOR,
+  "target": 'DOOR',
   "message": '置き配確認'
 }
 ```
@@ -89,7 +89,7 @@
 ```
 {
   "method": 'PROXY',
-  "target": 'DOOR,
+  "target": 'DOOR',
   "message": '置き配'
 }
 ```
@@ -97,7 +97,7 @@
 ```
 {
   "method": 'PROXY',
-  "target": 'BOTH,
+  "target": 'BOTH',
   "message": '在宅確認'
 }
 ```
@@ -106,7 +106,7 @@
 ```
 {
   "method": 'PROXY',
-  "target": 'DOOR,
+  "target": 'DOOR',
   "message": '撃退'
 }
 ```
@@ -115,7 +115,7 @@
 ```
 {
   "method": 'PROXY',
-  "target": 'DOOR,
+  "target": 'DOOR',
   "select": '撃退'
 }
 ```
