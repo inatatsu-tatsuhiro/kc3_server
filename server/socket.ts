@@ -5,6 +5,7 @@ import {
 
 const VISITOR_CHECK = "訪問者確認"
 const USER_CHECK = "在宅確認"
+const SIREN = "サイレン"
 const OKIHAI_CHECK = "置き配確認"
 const OKIHAI = "置き配"
 const REPEL = "撃退"
@@ -30,6 +31,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
       break;
     }
     console.log(event)
+    if ((event as string).charAt(0) !== '{') return
     const json = JSON.parse(event as string)
     if (json.method === 'PROXY') {
       // const res = await fetch('https://pokeapi.co/api/v2/pokemon/1') // 音声処理サーバに投げる
@@ -99,6 +101,14 @@ export const socket = async (ws: WebSocket): Promise<void> => {
               "method": 'PROXY',
               "target": DOOR,
               "message": REPEL,
+            }
+            status = 0
+            break
+          case 5:
+            result = {
+              "method": 'PROXY',
+              "target": APP,
+              "message": SIREN,
             }
             status = 0
             break

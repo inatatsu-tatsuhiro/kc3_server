@@ -144,8 +144,16 @@
 ```
 {
   "method": 'PROXY',
-  "target": 'BOTH,
+  "target": 'BOTH',
   "message": '在宅確認'
+}
+```
+### サイレン
+```
+{
+  "method": 'PROXY',
+  "target": 'APP',
+  "message": 'サイレン'
 }
 ```
 
