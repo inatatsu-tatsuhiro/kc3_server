@@ -15,6 +15,12 @@ const APP = "APP"
 const OK = "OK"
 const NG = "NG"
 
+const FRIEND = "友人"
+const NHK = "NHK"
+const SERVICE = "勧誘"
+const DELIVERY = "宅配"
+const UBER = "ウーバー"
+
 let sockets: WebSocket[] = new Array();
 
 let status = 0
@@ -51,6 +57,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": DOOR,
+              "visitor": null,
               "message": VISITOR_CHECK,
             }
             status = -1
@@ -60,6 +67,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": BOTH,
+              "visitor": FRIEND,
               "message": USER_CHECK,
             }
             status = 0
@@ -68,6 +76,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": DOOR,
+              "visitor": DELIVERY,
               "message": OKIHAI_CHECK,
             }
             status = -2
@@ -76,6 +85,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": DOOR,
+              "visitor": DELIVERY,
               "message": OKIHAI,
             }
             status = 0
@@ -84,6 +94,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": BOTH,
+              "visitor": DELIVERY,
               "message": USER_CHECK,
             }
             status = 0
@@ -92,6 +103,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": DOOR,
+              "visitor": NHK,
               "message": REPEL,
             }
             status = 0
@@ -100,6 +112,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": DOOR,
+              "visitor": SERVICE,
               "message": REPEL,
             }
             status = 0
@@ -108,6 +121,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": APP,
+              "visitor": UBER,
               "message": SIREN,
             }
             status = 0
@@ -125,6 +139,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": DOOR,
+              "visitor": null,
               "message": OK,
             }
             status = 0
@@ -133,6 +148,7 @@ export const socket = async (ws: WebSocket): Promise<void> => {
             result = {
               "method": 'PROXY',
               "target": DOOR,
+              "visitor": null,
               "message": NG,
             }
             status = 0

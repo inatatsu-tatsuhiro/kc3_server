@@ -66,6 +66,7 @@
 {
   "method": 'PROXY',
   "target": 'DOOR',
+  "visitor": null,
   "message": '訪問者確認'
 }
 ```
@@ -74,6 +75,7 @@
 {
   "method": 'PROXY',
   "target": 'BOTH',
+  "visitor": '友人',
   "message": '在宅確認'
 }
 ```
@@ -82,6 +84,7 @@
 {
   "method": 'PROXY',
   "target": 'DOOR',
+  "visitor": '宅配',
   "message": '置き配確認'
 }
 ```
@@ -90,6 +93,7 @@
 {
   "method": 'PROXY',
   "target": 'DOOR',
+  "visitor": '宅配',
   "message": '置き配'
 }
 ```
@@ -98,6 +102,7 @@
 {
   "method": 'PROXY',
   "target": 'BOTH',
+  "visitor": '宅配',
   "message": '在宅確認'
 }
 ```
@@ -107,6 +112,7 @@
 {
   "method": 'PROXY',
   "target": 'DOOR',
+  "visitor": 'NHK',
   "message": '撃退'
 }
 ```
@@ -116,6 +122,7 @@
 {
   "method": 'PROXY',
   "target": 'DOOR',
+  "visitor": '勧誘',
   "select": '撃退'
 }
 ```
@@ -125,6 +132,7 @@
 {
   "method": 'PROXY',
   "target": 'DOOR',
+  "visitor": null,
   "message": 'OK,
 }
 ```
@@ -134,6 +142,7 @@
 {
   "method": 'PROXY',
   "target": 'DOOR',
+  "visitor": null,
   "message": 'NG',
 }
 ```
@@ -141,10 +150,21 @@
 ## サーバー -> アプリ
 
 ### 在宅確認
+友人の場合
 ```
 {
   "method": 'PROXY',
   "target": 'BOTH',
+  "visitor": '友人',
+  "message": '在宅確認'
+}
+```
+宅配の場合
+```
+{
+  "method": 'PROXY',
+  "target": 'BOTH',
+  "visitor": '宅配',
   "message": '在宅確認'
 }
 ```
