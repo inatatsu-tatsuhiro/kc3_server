@@ -146,7 +146,7 @@
   "method": 'PROXY',
   "target": 'DOOR',
   "visitor": null,
-  "message": 'OK,
+  "message": 'OK',
 }
 ```
 
