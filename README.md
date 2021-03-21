@@ -1,5 +1,10 @@
 # サーバー仕様
 - アドレス : hack.inatatsu.com:8000
+## 使用技術
+- Deno
+- TypeScript
+- WebSocket
+# 仕様
 ## ドアホン -> サーバー
 ### 来客が来たとき
 ```
